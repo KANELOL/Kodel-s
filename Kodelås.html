@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Koden er 4356</h1>
+    <div></div>
+<button onclick="inTall(this)">1</button>
+<button onclick="inTall(this)">2</button>
+<button onclick="inTall(this)">3</button>
+<button onclick="inTall(this)">4</button>
+<button onclick="inTall(this)">5</button>
+<button onclick="inTall(this)">6</button>
+<button onclick="inTall(this)">7</button>
+<button onclick="inTall(this)">8</button>
+<button onclick="inTall(this)">9</button>
+<button onclick="sesam()">Lås Opp</button>
+<div id="info"></div>
+<script>
+    var kode = '';
+    var kodeRiktig = '4356';
+    function inTall(parapara) {
+       document.getElementById('info').innerHTML += parapara.innerHTML;
+       kode += parapara.innerHTML 
+    }
+    function sesam() {
+        if (kode.startsWith(kodeRiktig) && kode.length == 4) {
+alert('Riktig Kode!')
+    rens();
+        
+    } else if (!kode.startsWith(kodeRiktig) && kode.length >= 4) {
+        alert('Ikke Riktig Kode!')
+        rens();
+    } else {  
+    rens();
+    }
+    function rens() {
+        kode = '';
+        document.getElementById('info').innerHTML = '';   
+    }
+    }
+</script>
+</body>
+</html>
